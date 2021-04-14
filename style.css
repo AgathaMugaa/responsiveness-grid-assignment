@@ -1,0 +1,173 @@
+/* Body */
+body{
+	overflow-y: hidden;
+}
+/* Navigation bar */
+nav{
+	background: #178FAB;
+	width: 100%;
+	padding: 20px;
+}
+nav a{
+	color: #FFF;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+nav a:hover{
+	background: #FFF;
+	color: #000;
+}
+/* Main */
+.main{
+	width: 100%;
+}
+/* Container */
+.container {
+  display: grid;   
+  height: 500px;   
+  margin-top: 10px; 
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-areas:
+    "profile profile profile profile video video";
+  gap: 10px;
+}
+.user-profile{
+	grid-area: profile;
+}
+.favorite-video{
+    grid-area: video;
+    box-shadow: 2px 4px 8px 8px #E3E3E3;
+	padding: 10px;
+	border-radius: 5px;
+}
+/* Profile section */
+.profile{
+	width: 100%;
+	height: 300px;
+	border: solid 1px;
+	border-color: #E3E3E3;
+	border-radius: 5px;
+	background-image: url("images/c_3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.profile img{
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	position: relative;
+	z-index: 10;
+	left: 0.5%;
+	bottom: -145px;
+}
+/* Profile section */
+.bio{
+	box-shadow: 2px 4px 8px 8px #E3E3E3;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.bio:hover{
+	 animation: hoverUp 0.2s linear;
+}
+.bio h2{
+	margin-bottom: -10px;
+}
+.bio ul{
+    list-style: none;
+    position: relative;
+    left: -40px;
+}
+/* Hobbies section */
+.hobbies:hover{
+	animation: hoverUp 0.2s linear;
+}
+.hobbies{
+	box-shadow: 2px 4px 8px 8px #E3E3E3;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.hobbies h2{
+	margin-bottom: -10px;
+}
+.hobbies ul{
+    list-style: none;
+    position: relative;
+    left: -40px;
+}
+/* Skills */
+.skills:hover{
+	animation: hoverUp 0.2s linear;
+}
+.skills{
+	box-shadow: 2px 4px 8px 8px #E3E3E3;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+.skills h2{
+    margin-bottom: -10px;
+} 
+.skills ul{
+	list-style: none;
+    position: relative;
+    left: -40px;
+}
+/* Animations */
+@keyframes hoverUp{
+    0% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(-10px);
+   }
+  }
+/* SCreen responsiveness using media query */
+@media only screen and (max-width: 550px) {
+  .container {   
+      grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "profile"
+      "video";
+  }
+}
+@media only screen and (max-width: 600px) {
+    .profile{
+		width: 100%;
+		height: 100px;
+	}
+	.profile img{
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		position: relative;
+		z-index: 10;
+		left: 0.5%;
+		bottom: -40px;
+	}
+}
+@media only screen and (min-width: 600px) {
+	   .profile{
+		width: 100%;
+		height: 300px;
+		border: solid 1px;
+		border-color: #E3E3E3;
+		border-radius: 5px;
+		background-image: url("images/c_3.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+		.profile img{
+			border-radius: 50%;
+			height: 150px;
+			width: 150px;
+			position: relative;
+			z-index: 10;
+			left: 0.5%;
+			bottom: -145px;
+		}
+}
